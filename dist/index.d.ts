@@ -11,8 +11,11 @@ type SlugGeneratorProps = {
     disabled?: boolean;
     className?: string;
     icon?: ReactNode;
+    dir?: "ltr" | "rtl" | "auto";
+    generateOnTitleChange?: boolean;
+    transliteratePersian?: boolean;
 };
 
-declare function SlugGenerator({ title, value, onChange, label, placeholder, buttonText, disabled, className, icon, }: SlugGeneratorProps): react.JSX.Element;
+declare function SlugGenerator({ title, value, onChange, label, placeholder, buttonText, disabled, className, icon, dir, transliteratePersian, }: SlugGeneratorProps): react.JSX.Element;
 
 export { SlugGenerator, type SlugGeneratorProps };
