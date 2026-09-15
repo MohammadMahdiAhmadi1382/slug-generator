@@ -25,5 +25,8 @@
     "tsup": "^8.0.0",
     "typescript": "^5.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@codav/slug-generator": "file:codav-slug-generator-1.0.4.tgz"
+  }
 }

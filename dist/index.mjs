@@ -76,7 +76,7 @@ function SlugGenerator({
       icon,
       /* @__PURE__ */ jsx("span", { children: label })
     ] }),
-    /* @__PURE__ */ jsxs("div", { className: "relative", children: [
+    /* @__PURE__ */ jsxs("div", { className: "group relative", children: [
       /* @__PURE__ */ jsx(
         "input",
         {
@@ -92,15 +92,15 @@ function SlugGenerator({
             }
           },
           className: clsx(
-            "w-full rounded-lg border border-(--color-border)",
+            "h-12 w-full rounded-xl border border-(--color-border)",
             "bg-(--color-bg-main)",
-            "py-3 pe-4 ps-32",
+            "py-3 pe-4 ps-36",
             "text-sm text-(--color-text-primary)",
-            "outline-none transition-all",
+            "outline-none transition-all duration-300",
             "placeholder:text-(--color-text-secondary)/70",
-            "hover:border-[color-mix(in_oklab,var(--color-primary)_22%,var(--color-border))]",
-            "focus:border-[color-mix(in_oklab,var(--color-primary)_45%,var(--color-border))]",
-            "focus:ring-4 focus:ring-[color-mix(in_oklab,var(--color-primary)_12%,transparent)]",
+            "hover:border-[color-mix(in_oklab,var(--color-primary)_28%,var(--color-border))]",
+            "focus:border-[color-mix(in_oklab,var(--color-primary)_50%,var(--color-border))]",
+            "focus:ring-4 focus:ring-[color-mix(in_oklab,var(--color-primary)_10%,transparent)]",
             "dark:bg-white/[0.03]",
             "disabled:cursor-not-allowed disabled:opacity-50"
           )
@@ -112,21 +112,44 @@ function SlugGenerator({
           type: "button",
           onClick: handleGenerate,
           disabled: disabled || !title.trim(),
+          "aria-label": buttonText,
           className: clsx(
-            "absolute inset-y-1.5 start-1.5",
-            "inline-flex items-center justify-center gap-1.5",
-            "rounded-md px-3",
-            "text-xs font-medium text-white",
+            "absolute start-1.5 top-1/2 -translate-y-1/2",
+            "flex h-9 items-center gap-2 rounded-lg px-3.5",
+            "overflow-hidden",
+            "text-xs font-semibold text-white",
             "bg-(--color-primary)",
-            "transition-all duration-200",
-            "hover:bg-(--color-primary-soft)",
-            "focus:outline-none",
-            "focus:ring-2 focus:ring-(--color-primary)/30",
-            "disabled:cursor-not-allowed disabled:opacity-50"
+            "shadow-sm shadow-(--color-primary)/20",
+            "transition-all duration-300 ease-out",
+            "hover:-translate-y-1/2 hover:scale-[1.02]",
+            "hover:shadow-md hover:shadow-(--color-primary)/30",
+            "active:-translate-y-1/2 active:scale-[0.97]",
+            "focus:outline-none focus:ring-2 focus:ring-(--color-primary)/30",
+            "disabled:pointer-events-none disabled:opacity-40"
           ),
           children: [
-            /* @__PURE__ */ jsx(WandSparkles, { className: "size-4" }),
-            /* @__PURE__ */ jsx("span", { children: buttonText })
+            /* @__PURE__ */ jsx(
+              "span",
+              {
+                className: clsx(
+                  "absolute inset-0 -translate-x-full",
+                  "bg-gradient-to-r from-transparent via-white/20 to-transparent",
+                  "transition-transform duration-700",
+                  "group-hover:translate-x-full"
+                )
+              }
+            ),
+            /* @__PURE__ */ jsx(
+              WandSparkles,
+              {
+                className: clsx(
+                  "relative size-4 shrink-0",
+                  "transition-transform duration-300",
+                  "group-hover:rotate-12 group-hover:scale-110"
+                )
+              }
+            ),
+            /* @__PURE__ */ jsx("span", { className: "relative whitespace-nowrap", children: buttonText })
           ]
         }
       )
