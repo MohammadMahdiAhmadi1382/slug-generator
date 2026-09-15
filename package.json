@@ -20,13 +20,9 @@
   },
   "devDependencies": {
     "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
     "lucide-react": "^0.400.0",
     "tsup": "^8.0.0",
     "typescript": "^5.0.0"
   },
-  "license": "MIT",
-  "dependencies": {
-    "@codav/slug-generator": "file:codav-slug-generator-1.0.4.tgz"
-  }
+  "license": "MIT"
 }
