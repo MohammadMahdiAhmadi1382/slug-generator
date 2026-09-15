@@ -1,6 +1,6 @@
 {
   "name": "@codav/slug-generator",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A lightweight, reusable TypeScript-first React slug generator component",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
