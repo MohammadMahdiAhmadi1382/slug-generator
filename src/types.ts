@@ -10,4 +10,7 @@ export type SlugGeneratorProps = {
   disabled?: boolean;
   className?: string;
   icon?: ReactNode;
+  dir?: "ltr" | "rtl" | "auto";
+  generateOnTitleChange?: boolean;
+  transliteratePersian?: boolean;
 };
