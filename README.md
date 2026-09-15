@@ -139,7 +139,7 @@ learn-laravel-from-scratch
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/slug-generator.git
+git clone https://github.com/MohammadMahdiAhmadi1382/slug-generator.git
 cd slug-generator
 ```
 
