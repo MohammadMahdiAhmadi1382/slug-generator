@@ -72,10 +72,7 @@ function SlugGenerator({
     onChange(createSlug(title, transliteratePersian));
   };
   return /* @__PURE__ */ jsxs("div", { className: clsx("w-full space-y-1.5", className), children: [
-    label && /* @__PURE__ */ jsxs("label", { className: "flex items-center gap-2 text-sm font-medium text-(--color-text-primary)", children: [
-      icon,
-      /* @__PURE__ */ jsx("span", { children: label })
-    ] }),
+    label && /* @__PURE__ */ jsx("label", { className: "flex items-center gap-2 text-sm font-medium text-(--color-text-primary)", children: /* @__PURE__ */ jsx("span", { children: label }) }),
     /* @__PURE__ */ jsxs("div", { className: "group relative", children: [
       /* @__PURE__ */ jsx(
         "input",
@@ -92,7 +89,7 @@ function SlugGenerator({
             }
           },
           className: clsx(
-            "h-12 w-full rounded-xl border border-(--color-border)",
+            "h-10 w-full rounded-xl border border-(--color-border)",
             "bg-(--color-bg-main)",
             "py-3 pe-4 ps-36",
             "text-sm text-(--color-text-primary)",
